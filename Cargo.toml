@@ -1,0 +1,22 @@
+[package]
+name = "your_project_name"  # Replace with your actual project name
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "A template Rust + Qt (QML) project using cxx-qt"
+# repository = "https://github.com/yourusername/your_project"
+# homepage = "https://yourhomepage.com"
+# documentation = "https://docs.rs/your_project"
+
+[dependencies]
+cxx = "1.0.95"
+cxx-qt = "0.7"
+cxx-qt-lib = { version = "0.7", features = ["qt_full"] }
+
+[build-dependencies]
+# Enable this feature to allow static linking with Qt 6
+cxx-qt-build = { version = "0.7", features = ["link_qt_object_files"] }
+
+[package.metadata.template]
+# Optional: You can use this section to include hints for template engines
+template = true
